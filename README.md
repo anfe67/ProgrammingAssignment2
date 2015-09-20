@@ -1,12 +1,24 @@
 ## Introduction
 
-The first function defines a wrapper for a matrix, which we call mat_obj. 
-The wrapper contains a matrix object, which shall contain the inverse 
-of mat_obj, which is mat_inv. This is initially set to NULL and shall 
-be only initialized when cacheSolve is called the first time. 
+I have used exactly the same "schema" provided in the vector mean example in the assignment 
+instructions.  
 
-makeCacheMatrix defines our "object wrapper", it defines an "extended" matrix object: 
- 
+The first function (makeCacheMatrix) defines a wrapper object for a matrix, which I store 
+internally as mat_obj. In practice  it defines an "extended" matrix object.
+
+This wrapper contains a second matrix object, which initially is set to NULL 
+and that shall contain the inverse of mat_obj. This I have called mat_inv. 
+
+Upon creation of the initial object, mat_inv is set to NULL. It shall 
+be only initialized the first time when a call to cacheSolve is made. Any 
+successive call to cacheSolve shall return the cached object and no longer perform 
+the inverse calculation. 
+
+Use of the set function cause a change to mat_obj, therefore also the cached matrix is 
+set to NULL (mat_inv<-NULL), and therefore the next call to cacheSolve() shall have to 
+invert the new mat_obj. 
+
+
 ### Variables of interest
  
 * mat_obj: Our input matrix
