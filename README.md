@@ -24,7 +24,7 @@ invert the new mat_obj.
 * mat_obj: Our input matrix
 * mat_inv: The inverted matrix, initially set to NULL 
  
-### Helper functions: 
+### Internal functions (methods): 
 
 * get: Returns mat_obj 
 * set: Sets    mat_obj
