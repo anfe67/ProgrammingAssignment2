@@ -1,4 +1,4 @@
-### Introduction
+## Introduction
 
 The first function defines a wrapper for a matrix, which we call mat_obj. 
 The wrapper contains a matrix object, which shall contain the inverse 
@@ -7,19 +7,19 @@ be only initialized when cacheSolve is called the first time.
 
 makeCacheMatrix defines our "object wrapper", it defines an "extended" matrix object: 
  
-## Variables of interest
+### Variables of interest
  
 * mat_obj: Our input matrix
 * mat_inv: The inverted matrix, initially set to NULL 
  
-## Helper functions: 
+### Helper functions: 
 
 * get: Returns mat_obj 
 * set: Sets    mat_obj
 * setinverse: Sets mat_inv 
 * getinverse  Returns the current value of mat_inv (can be NULL)
  
-## Usage example 
+### Usage example 
 
 The following makes a "makeCacheMatrix" object called my_threebythree_matrix (printing out the list of methods)
 
