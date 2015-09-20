@@ -23,10 +23,10 @@ makeCacheMatrix defines our "object wrapper", it defines an "extended" matrix ob
 
 The following makes a "makeCacheMatrix" object called my_threebythree_matrix (printing out the list of methods)
 
-*    <pre><code>my_threebythree_matrix<-makeCacheMatrix(matrix(c(1,2,3,4,5,6,7,8,8),3,3)) </code></pre>
+<pre><code>*    my_threebythree_matrix<-makeCacheMatrix(matrix(c(1,2,3,4,5,6,7,8,8),3,3)) </code></pre>
 
 To get the original matrix:  
-*    <pre><code>my_threebythree_matrix$get()</code></pre>
+<pre><code>*    my_threebythree_matrix$get()</code></pre>
 
 This shall output:  
 
@@ -38,7 +38,7 @@ This shall output:
 </code></pre>
 
 First time call of cacheSolve: 
-*  <pre><code>cacheSolve(my_threebythree_matrix)</code></pre>
+<pre><code>*    cacheSolve(my_threebythree_matrix)</code></pre>
   
 Shall output: 
 
