@@ -1,3 +1,5 @@
+## NOTE: Please see also README.md
+##
 ## The first function defines a wrapper for a matrix, which we call mat_obj. 
 ## The wrapper contains a matrix object, which shall contain the inverse 
 ## of mat_obj, which is mat_inv. This is initially set to NULL and shall 
