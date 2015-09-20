@@ -1,10 +1,5 @@
-## NOTE: Please see also README.md
+## NOTE: See also README.md
 ##
-## The first function defines a wrapper for a matrix, which we call mat_obj. 
-## The wrapper contains a matrix object, which shall contain the inverse 
-## of mat_obj, which is mat_inv. This is initially set to NULL and shall 
-## be only initialized when cacheSolve is called the first time. 
-
 ## makeCacheMatrix defines our "object wrapper", it defines an "extended" matrix object: 
 ## 
 ## Variables of interest
@@ -22,34 +17,8 @@
 ## Usage example : This makes a matrix (printing out the list of methods)
 ##    my_threebythree_matrix<-makeCacheMatrix(matrix(c(1,2,3,4,5,6,7,8,8),3,3)) 
 ##
-## Getting the matrix:  
+## Getting back the matrix:  
 ##   my_threebythree_matrix$get()
-##
-## Shall output:  
-##
-##       [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    8
-##
-## First time call of cacheSolve: 
-##  cacheSolve(my_threebythree_matrix)
-##  
-## Shall output: 
-##
-##            [,1]      [,2] [,3]
-## [1,] -2.666667  3.333333   -1
-## [2,]  2.666667 -4.333333    2
-## [3,] -1.000000  2.000000   -1
-##
-## A second call shall output: 
-##
-## getting cached data
-##            [,1]      [,2] [,3]
-## [1,] -2.666667  3.333333   -1
-## [2,]  2.666667 -4.333333    2
-## [3,] -1.000000  2.000000   -1
-##
 
 makeCacheMatrix <- function(mat_obj = matrix()) {
       
@@ -79,7 +48,7 @@ makeCacheMatrix <- function(mat_obj = matrix()) {
 
 
 ## The cacheSolve function computes the inverse of a matrix only when 
-## this has not yet been calculated by a previous call  
+## it finds it equals to NULL. 
 
 cacheSolve <- function(x, ...) {
       ## Return a matrix that is the inverse of 'x'. I call the temporary 
